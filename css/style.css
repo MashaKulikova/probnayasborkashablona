@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+* {
+	margin: 0; /*отступы по краям*/x
+	padding: 0;
+	font-family:'Montserrat', sans-serif;
+	box-sizing: border-box; 
+	/*box-sizing: border-box; нужен чтобы padding не увеличивал ширину блока, 
+	а учитывался в заданный блок*/
+	/*стиль * применится ко всем блокам*/
+}
+.container {
+	width: 1300px;
+	padding: 100px 15px;
+	margin: 0 auto;
+}
+.section-title {
+font-size: 50px;
+text-align: center;
+margin-bottom: 30px;
+}
+.nav-menu {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100px;
+	background-color:#121212;
+	padding: 20px;
+	z-index: 20; /*делает блок приоритетным, будет над всеми блоками, не перекроется, чем выше число тем выше приоритет*/
+}
+.nav-item {
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	font-size: 25px;
+	margin-left: 20px;
+	transition: 0.3s; /*с какой скоростью будет выпячиваться текст при наведении на ссылку в верхнем меню*/
+}
+.nav-item:hover {/*добавление hover делает Псевдо стиль; при наведении на ссылку цвет меняется на оранжевый и текст выпячивается*/
+	color: #FFC997;
+	transform: scale(1.2);
+}
+.nav-container {
+	float: right;
+}
+.main-section {
+	height: 100vh; /*vh - фиксирует размер экрана, если листать вниз, будет просто белый фон*/
+	background: linear-gradient(#DB7E7E, #FFC997); /* указывается верхний и нижний цвет, переход (градиент) сделается автоматом*/
+}
+.main-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);/*такое сочетание 4х тегов позволит разместитm элемент по центру блока*/
+	width: fit-content;
+	z-index: 10;
+}
+.main-content-text {
+	font-size: 100px;
+	color: #fff;
+	text-shadow: 10px 10px 15px #E06161;
+	animation: animation-name 15s infinite;
+}
+.main-content-btn {
+	display: block;
+	width: 300px;
+	height: 80px;
+	margin: 15px auto;
+	background-color: #fff;
+	border-radius: 50px;
+	box-shadow: 10px 10px #E06161;
+	text-decoration: none;
+	text-align: center;
+	font-weight: 600;
+	color: #000;
+	font-size: 20px;
+	line-height: 80px;
+}
+.main-backround {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden; /*если блок вылезает за граицы сайта, он будет обрезаться*/
+}
+.circle1 {
+	position: absolute;
+	top: -100px;
+	left: -50px;
+}
+.circle2 {
+	position: absolute;
+	right: -40px;
+	top: -40px;
+	animation: move-left-down 8s infinite;
+}
+.circle3 {
+	position: absolute;
+	bottom: -50px;
+	left: -50px;
+	animation: move-up-left 8s linear infinite; /*указ назв кейфрейма, колич сек, линейный, кол-во повторений*/
+}
+.circle-bordered {
+	position: absolute;
+	left: 250px;
+	bottom: -10px;
+	overflow: hidden;
+	animation: move-right 10s infinite;
+}
+.circle-dashed-border {
+	position: absolute;
+	right: -50px;
+	bottom: -200px;
+	overflow: hidden;
+	animation: rotation 30s linear infinite; /*указ назв кейфрейма, колич сек, линейный, кол-во повторений// 
+	чем больше секунд, тем медленней крутится*/
+}
+.triangle {
+	position: absolute;
+	left: 650px;
+	top: 150px;
+	animation: move-right 15s linear infinite;
+}
+.octagon {
+	position: absolute;
+	bottom: 5%;
+	right: 40%;
+	animation: rotate-move 10s infinite;
+}
+.section-text {
+	line-height: 30px;
+	font-size: 20px;
+}
+.doing {
+	background: linear-gradient(7deg, #DB7E7E 18%, #FFC997 70%, #fff 70%); /*7deg означат градус угла наклона*/
+}

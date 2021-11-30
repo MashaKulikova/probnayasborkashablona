@@ -1,0 +1,73 @@
+/*создание анимации, создание команды всегда указ с собачкой */ @keyframes move-up-left {
+	0% {
+		transform: translate(0, 0);    /*указываем что будет при нуле процентов*/
+	}
+	50% {
+		transform: translate(40px, 80px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(350deg);
+	}
+}
+@keyframes move-right {
+	0% {
+		transform: translateX(0); /*translateX означ движ по сои Х (горизонт)*/
+	}
+	50% {
+		transform: translateX(230px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes animation-name {   
+  0% {     
+    color: red;   
+  }   
+  25% {
+  	color: pink;
+  }
+  50% {     
+    color: orange;   
+  } 
+  75% {
+  	color: yellow;
+  }
+  90% {
+    color: blue;
+   }
+   100% {     
+    color: red;   
+  }
+}
+@keyframes rotate-move {
+	0% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+	50% {
+		transform: translate(80px, 200px) rotate(180deg);
+	}
+	100% {
+		transform: translate(0, 0) rotate(359deg);
+	}
+}
+@keyframes move-left-down {
+	0% {
+		transform: translate(0) rotate(0deg);
+	}
+	50% {
+		transform: translate(-180px, 200px) rotate(180deg);
+	}
+	100% {
+		transform: translate(0, 0) rotate(359deg);
+	}
+}
+
